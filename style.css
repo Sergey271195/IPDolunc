@@ -4,13 +4,13 @@ Theme Name: Custom Theme
 
 @font-face { 
     font-family: "Girloy-Regular";
-    src: url(fonts/Gilroy-Regular.ttf);
+    src: url(./css/fonts/Gilroy-Regular.ttf);
     font-display: swap;
 }
 
 @font-face { 
     font-family: "Girloy-Bold";
-    src: url(fonts/Gilroy-Bold.ttf);
+    src: url(./css/fonts/Gilroy-Bold.ttf);
     font-display: swap;
 }
 
@@ -52,29 +52,61 @@ img {
     max-width: 100%;
 }
 
-.header {
-    width: 100%;
-    color: #FFFFFF;
-    font-family: 'Girloy-Regular';
-    display: flex;
-    justify-content: center;
-}
-
-.logo-main {
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 35px;
-    text-decoration: none;
-}
-
 .container {
     width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.main-background-img {
+    position: absolute;
+    z-index: -1;
+    height: 650px;
+}
+
+#header-container {
+    margin-top: 10px;
+}
+
+.header {
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Girloy-Regular';
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-phone-container {
+    display: flex;
+    margin-left: 120px;
+    align-items: center;
+}
+
+.header-phone-link {
+    margin-left: 20px;
+    font-family: 'Girloy-Bold';
+}
+
+.logo-main {
+    margin-right: 25px;
+}
+
+.anchor-link {
+    border: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.anchor-link:hover {
+    border-bottom: 2px solid #00ADE5;
+    box-shadow: 1px 8px 8px -7px  #00ADE5;
+}
+
+.anchor-link:active {
+    border-bottom: 2px solid #00ADE5;
+    box-shadow: 1px 8px 8px -7px  #00ADE5;
 }
 
 .container-center {
@@ -96,312 +128,140 @@ img {
     justify-content: center;
 }
 
-
-
-.header-right-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 70%;
-}
-
-.header-container {
-    display: flex;
-    width: 40%;
-}
-
-.header-container-column {
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-}
-
-.header-call-first-div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header-legend {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-    word-wrap: normal;
-}
-
-.header-img {
-    width: 5%;
-}
-
-.order-call {
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
+.main-banner-container {
+    margin-top: 30px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    flex: 0.5;
 }
 
 .first-title {
-    color: #2B2962;
     font-style: normal;
     font-weight: bold;
-    font-size: 35px;
-    line-height: 46px;
-}
-
-.second-title {
-    color: #2B2962;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 46px;
-    font-family: 'Girloy-Bold';
-}
-
-.catalog-list {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    list-style: none;
-    margin-left: 20px;
-}
-
-.catalog-list li {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    color: #171717;
-    font-family: 'Girloy-Regular'
-}
-
-.catalog-list li::before {
-    content: "\25AA";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: #2B2962; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-
-.catalog-button {
-    cursor: pointer;
-    background-color: #2B2962;
+    font-size: 55px;
     color: #FFFFFF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 163.2%;
+}
+
+.text-after-first-title {
+    font-weight: 500;
+    font-size: 17px;
+    color: #FFFFFF;
+    line-height: 170%;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.video-button-container {
+    margin-top: 50px;
     display: flex;
     align-items: center;
-    padding: 12px;
-    justify-content: space-evenly;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 146.5%;
+    color: #FFFFFF;
+}
+
+.video-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #00ADE5;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.video-button-label {
+    flex: 0.3;
 }
 
 .section-title {
-    width: 70%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 31px;
-    text-align: center;
-    color: #2B2962;
+    font-weight: 600;
+    font-size: 33px;
+    color: #0D1255;
 }
 
-.certificate {
-    padding: 20px;  
-    width: 30%;
-    height: 250px;
+#advantages-section {
+    height: 450px;
+    margin-top: 70px;
+    flex-direction: column;
+    background-image: url('images/background-advantages.png');
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    margin-bottom: 0px;
 }
 
 
-.price-list-div {
-    align-self: baseline;
+.advantages-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1.1fr 0.9fr;
+    margin-top: 60px;
+    column-gap: 16px;
 }
 
-.brends-list-div {
-    align-self: baseline;
+.advantage-container {
+    border-left: 3px solid #00ADE5;
+    padding-left: 20px;
 }
 
-.slider {
-    border: 2px solid #2B2962; 
-    width: 30%;
-    min-height: 350px;
+.advantage-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 8px;
 }
 
-.prev-arrow {
-    right: 20px;
-    top: 85%;
-    z-index: 2;
-    cursor: pointer;
-    vertical-align: middle;
-    position: absolute;
+
+.advantage-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
 }
 
-.next-arrow {
-    right: 20px;
-    top: 75%;
-    z-index: 2;
-    cursor: pointer;
-    vertical-align: middle;
-    position: absolute;
+#tasks-section {
+    margin: 0;
 }
 
-.wrapper {
-    margin-top: 20px;
+.tasks-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 20px;
-}
-
-.price-list-title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 25px;
-    color: #2B2962;
-}
-
-.banner {
+    column-gap: 30px;
+    row-gap: 30px;
     width: 100%;
-    height: 300px;
-    background-image: url(images/Rectangle\ 3.jpg);
 }
 
-.banner-content {
-    width: 40%;
-    margin-left: 100px;
+.task-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-
-.banner-title {
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 40px;
-    color: #EE4A0D;
-    margin-top: 35px;
-    margin-bottom: 40px;
-}
-
-.banner-first-content {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    color: #EE4A0D;
-    margin-bottom: 10px;
-}
-
-.banner-second-content {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 26px;
-    color: #EE4A0D;
-}
-
-.banner-footer {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    color: #000000;
-    margin-top: auto;
-    margin-bottom: 20px;
-
-}
-
-.product-card {
-    border: 1px solid #ECECEC;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
-    padding-right: 30px;
-    height: 250px;
-    width: 30%;
-    margin-top: 20px;
-}
-
-.product-title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 19px;
-    color: #2B2962;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #2B2962;
-}
-
-.old-price {
-    font-style: normal;
-    font-size: 16px;
-    color: #A3A3A5;
-    text-decoration: line-through;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.price-product-cols {
-    margin-top: auto;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-us {
-    width: 45%;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    color: #2B2962;
-}
-
-.about-us-div {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-content: flex-end;
-}
-
-.about-us-icon {
-    margin-right: 20px;
-    border-radius: 50%;
-    height: 68px;
-    width: 68px;
-    border: 1.1px solid #2B2962;
-    display: flex;
-    align-items: center;
+    min-height: 287px;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding-left: 100px;
 }
 
-.about-us-content {
-    height: 68px;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: column;
+.task-title {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.task-description {
+    font-style: normal;
+    font-weight: 500;
     font-size: 16px;
-    color: #2B2962;
+    line-height: 27px;
+    color: #FFFFFF;
 }
 
 .map-content {

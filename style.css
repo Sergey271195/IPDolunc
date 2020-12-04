@@ -264,24 +264,171 @@ img {
     color: #FFFFFF;
 }
 
+.form-solved-tasks-sections-bg {
+    background: url('./images/background-form.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-container-main {
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 70px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0D1255;
+    padding: 40px;
+    padding-left: 60px;
+    padding-right: 40px;
+    width: 25%;
+}
+
+.form-input {
+    width: 85%;
+    border: 0;
+    border-bottom: 1px solid #0D1255;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #0D1255;
+    outline-style: none;
+}
+
+.form-input::placeholder {
+    color: #0D1255;
+    opacity: 0.6;
+}
+
+.form-input:active, .form-input:focus {
+    border: 0;
+    border-bottom: 1px solid #0D1255; 
+}
+
+.confirmation {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #7F7F7F;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    outline: none;
+    border: none;
+    background: #00ADE5;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form-description-container {
+    width: 50%;
+    margin-left: 40px;
+}
+
+.form-conditions {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 168.5%;
+    color: #0D1255;
+    margin-bottom: 40px;
+}
+
+.form-conditions-list-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0D1255;
+    margin-bottom: 20px;;
+}
+
+.form-conditions-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.form-conditions-list li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #0D1255;
+    margin-left: 18px;
+}
+
+.form-conditions-list li::before {
+    content: "\2022";  /* Add content:\2022 \2022 is the CSS Code/unicode for a bullet */
+    color: #00ADE5;; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
+.completed-tasks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-top: 60px;
+    row-gap: 30px;
+}
+
+.completed-task-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    color: #0D1255;
+    margin-bottom: 20px;
+}
+
+#map-section {
+    flex-direction: column;
+}
+
 .map-content {
     position: absolute;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    height: 290px;
-    background: #2B2962;
+    height: 220px;
+    background: #FFFFFF;
+    border: 0.7px solid #0D1255;
+    box-sizing: border-box;
     width: 26%;
     margin-left: 100px;
     justify-content: center;
 }
 
 .map-content-text {
+    font-size: 18px;
+    color: #0D1255;
     margin-left: 50px;
     font-style: normal;
-    font-size: 16px;
-    color: #FFFFFF;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.map-content-contacts {
+    font-size: 16px;
+    color: #0D1255;
+    margin-left: 50px;
+    font-style: normal;
+    display: flex; 
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .footer {
@@ -295,95 +442,15 @@ img {
 .footer-content {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    color: #444444;
-}
-
-.modal-input {
-    background-color: #F0F1F6;
-    border: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: #0D1255;
 }
 
 span.wpcf7-form-control-wrap {
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.order-btn {
-    cursor: pointer;
-    color: white;
-    background-color: #2B2962;
-    border: 0;
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    float: right;
-    margin: 10px;
-}
-
-#price-list-table {
-    border-collapse: collapse;
-    width: 100%;
-    display: none;
-}
-
-#price-list-table td, #price-list-table th {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-
-#price-list-table tr:nth-child(even){background-color: #f2f2f2;}
-
-#price-list-table tr:hover {background-color: #ddd;}
-
-#price-list-table th {
-  padding: 12px;
-  text-align: center;
-  background-color: #2B2962;
-  color: white;
-}
-
-#header-address {
-    flex: 0.32;
-}
-
-#header-call {
-    flex: 0.22;
-}
-
-#phone-icon {
-    display: none;
-}
-
-#first-screen-image {
-    flex: 1;
-}
-
-.first-screen-div {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    margin-left: 50px;
-}
-
-.first-screen-main-div {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    flex: 0.9; 
-    margin-right: 20px;
-}
-
-.about-us-container {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 0.9fr 1.2fr 1fr 1fr;
 }
 
 @media (max-width: 1200px){

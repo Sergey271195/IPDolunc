@@ -1,0 +1,10 @@
+css/bootstrap*
+js/*.js
+*.php
+!js/script.js
+css/fonts/stylesheet.css
+*.woff
+*.eot
+*.ttf
+!css/fonts/Gilroy-Regular.ttf
+!css/fonts/Gilroy-Bold.ttf

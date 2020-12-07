@@ -8,3 +8,5 @@ css/fonts/stylesheet.css
 *.ttf
 !css/fonts/Gilroy-Regular.ttf
 !css/fonts/Gilroy-Bold.ttf
+customtheme/
+video/
